@@ -1,5 +1,7 @@
-import { isValidRow } from './../src/module.js';
+import { isValidSudoku } from './../src/module.js';
 import { isValidCol } from './../src/module.js';
+import { isValidRow } from './../src/module.js';
+
 describe('seppuku', function() {
 
   it('should return true if all rows contain the numbers 1-9', function() {
@@ -46,6 +48,21 @@ describe('seppuku', function() {
       [9, 9]
     ];
     expect(isValidCol(badColumns)).toEqual(false);
+  });
+
+  it(`should return true if a complete sudoku array resolves to true with both of the above functions`, function () {
+    let completeArray = [
+      [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      [9, 1, 2, 3, 4, 5, 6, 7, 8],
+      [8, 9, 1, 2, 3, 4, 5, 6, 7],
+      [7, 8, 9, 1, 2, 3, 4, 5, 6],
+      [6, 7, 8, 9, 1, 2, 3, 4, 5],
+      [5, 6, 7, 8, 9, 1, 2, 3, 4],
+      [4, 5, 6, 7, 8, 9, 1, 2, 3],
+      [3, 4, 5, 6, 7, 8, 9, 1, 2],
+      [2, 3, 4, 5, 6, 7, 8, 9, 1]
+    ];
+    expect(isValidSudoku(completeArray)).toEqual(true);
   });
 
 });
