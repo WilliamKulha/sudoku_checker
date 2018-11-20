@@ -1,0 +1,5 @@
+##Don't track the thousands of node modules files, unneccessary Mac OS files, or the output folder.
+node_modules/
+DS_Store
+.DS_Store 
+dist/
