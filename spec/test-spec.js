@@ -96,4 +96,19 @@ describe('Sudoku Checker', function() {
     expect(isValidGrids(exampleSudoku)).toEqual(true);
   });
 
+  it(`should return false if there are repeat numbers in any of the 3x3 grids`, function() {
+    let badExampleSudoku = [
+      [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      [9, 1, 2, 3, 4, 5, 6, 7, 8],
+      [8, 9, 1, 2, 3, 4, 5, 6, 7],
+      [7, 8, 9, 1, 2, 3, 4, 5, 6],
+      [6, 7, 8, 9, 1, 2, 3, 4, 5],
+      [5, 6, 7, 8, 9, 1, 2, 3, 4],
+      [4, 5, 6, 7, 8, 9, 1, 2, 3],
+      [3, 4, 5, 6, 7, 8, 9, 1, 2],
+      [2, 3, 4, 5, 6, 7, 8, 9, 1]
+    ];
+    expect(isValidGrids(badExampleSudoku)).toEqual(false);
+  });
+
 });
