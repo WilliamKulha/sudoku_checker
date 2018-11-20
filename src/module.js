@@ -26,3 +26,12 @@ export const isValidCol = function(sudokuArray) {
   });
   return isHeAGoodBoi;
 };
+
+export const isValidSudoku = completeSudokuArray => {
+  if (isValidCol(completeSudokuArray) && isValidRow(completeSudokuArray) === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
