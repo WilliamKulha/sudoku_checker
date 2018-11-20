@@ -65,4 +65,19 @@ describe('seppuku', function() {
     expect(isValidSudoku(completeArray)).toEqual(true);
   });
 
+  it(`should return false if a complete sudoku array resolves false with either isValidCol OR isValidRow`, function () {
+    let badCompleteArray = [
+      [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      [9, 1, 2, 3, 4, 5, 6, 7, 8],
+      [8, 9, 1, 2, 3, 4, 5, 6, 7],
+      [7, 8, 9, 1, 2, 3, 4, 5, 6],
+      [6, 7, 8, 9, 1, 2, 3, 4, 5],
+      [5, 6, 7, 8, 9, 1, 2, 3, 4],
+      [4, 5, 6, 7, 8, 9, 1, 2, 3],
+      [3, 4, 5, 6, 7, 8, 9, 1, 2],
+      [2, 1, 4, 5, 6, 7, 8, 9, 1]
+    ];
+    expect(isValidSudoku(badCompleteArray)).toEqual(false);
+  });
+
 });
