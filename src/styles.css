@@ -1,3 +1,9 @@
 body {
   background-color: lightskyblue;
 }
+
+.my_form {
+  margin: 2em;
+  border-width:5px;
+  border-color:#000;
+}
