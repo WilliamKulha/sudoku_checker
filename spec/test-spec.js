@@ -33,4 +33,19 @@ describe('seppuku', function() {
     expect(isValidCol(columns)).toEqual(true);
   });
 
+  it(`should return false if all columns don't contain the numbers 1-9`, function() {
+    let badColumns = [
+      [1, 2],
+      [2, 1],
+      [2, 3],
+      [4, 4],
+      [5, 5],
+      [6, 6],
+      [7, 7],
+      [8, 8],
+      [9, 9]
+    ];
+    expect(isValidCol(badColumns)).toEqual(false);
+  });
+
 });
