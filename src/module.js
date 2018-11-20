@@ -61,7 +61,7 @@ export const isValidGrids = completeSudokuArray => {
 };
 
 export const isValidSudoku = completeSudokuArray => {
-  if (isValidCol(completeSudokuArray) && isValidRow(completeSudokuArray) === true) {
+  if (isValidCol(completeSudokuArray) && isValidRow(completeSudokuArray) && isValidGrids(completeSudokuArray) === true) {
     return true;
   } else {
     return false;
