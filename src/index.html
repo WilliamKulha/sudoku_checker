@@ -7,11 +7,53 @@
   <title>Sudoku Checker</title>
 </head>
 <body>
+  <div class="jumbotron text-center">
+      <h1>
+        Sudoku Checker
+      <small>Input your solution below and the page will tell you whether it is a valid Sudoku solution or not</small>
+      </h1>
+  </div>
   <div class="container">
-    <div class="jumbotron">
-        <h1>Sudoku Checker</h1>
-    </div>
-    
+    <div class="my_form">
+      <form id="user_input">
+       <div class="row" id="firstRow">
+         <label for="row1">Row One</label>
+          <div class="col-1">
+            <input type="number" class="form-control" id=firstRowOne>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowTwo>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowThree>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowFour>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowFive>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowSix>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowSeven>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowEight>
+          </div>
+          <div class="col-1">
+              <input type="number" class="form-control" id=firstRowNine>
+          </div>
+       </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-info">Check</button>
+        </div>
+      </form>
+    </div> 
+    <div id="results">
+
+    </div>   
   </div>
 
 </body>
